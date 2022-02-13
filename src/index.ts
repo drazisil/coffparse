@@ -28,10 +28,9 @@ export interface IProcessorState {
     s2: 0 | 1
 }
 
-
 export function checkState(state: IProcessorState): string {
-    const {s0, s1, s2} = state
-    
+    const { s0, s1, s2 } = state
+
     if (s0 === 0 && s1 === 1 && s2 === 0) {
         return 'T1'
     }
@@ -56,45 +55,41 @@ export function checkState(state: IProcessorState): string {
     if (s0 === 1 && s1 === 0 && s2 === 1) {
         return 'T5'
     }
-    throw new Error("Unknown State!");
-    
+    throw new Error('Unknown State!')
 }
 
 export function setState(requestedState: string): IProcessorState {
-    
     if (requestedState === 'T1') {
-        return {s0: 0, s1: 1, s2: 0}
+        return { s0: 0, s1: 1, s2: 0 }
     }
-    
+
     if (requestedState === 'T1I') {
-        return {s0: 0, s1: 1, s2: 1}
+        return { s0: 0, s1: 1, s2: 1 }
     }
 
     if (requestedState === 'T2') {
-        return {s0: 0, s1: 0, s2: 1}
+        return { s0: 0, s1: 0, s2: 1 }
     }
 
     if (requestedState === 'WAIT') {
-        return {s0: 0, s1: 0, s2: 0}
+        return { s0: 0, s1: 0, s2: 0 }
     }
 
     if (requestedState === 'T3') {
-        return {s0: 1, s1: 0, s2: 0}
+        return { s0: 1, s1: 0, s2: 0 }
     }
 
     if (requestedState === 'STOPPED') {
-        return {s0: 1, s1: 1, s2: 0}
+        return { s0: 1, s1: 1, s2: 0 }
     }
 
     if (requestedState === 'T4') {
-        return {s0: 1, s1: 1, s2: 1}
+        return { s0: 1, s1: 1, s2: 1 }
     }
 
     if (requestedState === 'T5') {
-        return {s0: 1, s1: 0, s2: 1}
+        return { s0: 1, s1: 0, s2: 1 }
     }
 
-    throw new Error("Unknown State!");
-    
+    throw new Error('Unknown State!')
 }
-
