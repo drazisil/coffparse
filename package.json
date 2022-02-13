@@ -5,13 +5,15 @@
     "main": "index.js",
     "scripts": {
         "start": "ts-node index.ts mco.exe",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "@types/node": "16.11.24",
+        "@types/mocha": "9.1.0",
+        "mocha": "9.2.0",
         "prettier": "2.5.1",
         "ts-node": "10.5.0",
         "typescript": "4.5.5"
