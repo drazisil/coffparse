@@ -30,7 +30,7 @@ export function checkState(state: IProcessorState): string {
         return 'T1'
     }
     if (s0 === 0 && s1 === 1 && s2 === 1) {
-        return 'T11'
+        return 'T1I'
     }
     if (s0 === 0 && s1 === 0 && s2 === 1) {
         return 'T2'
@@ -60,7 +60,7 @@ export function setState(requestedState: string): IProcessorState {
         return {s0: 0, s1: 1, s2: 0}
     }
     
-    if (requestedState === 'T11') {
+    if (requestedState === 'T1I') {
         return {s0: 0, s1: 1, s2: 1}
     }
 
