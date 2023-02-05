@@ -7,7 +7,7 @@ import {
     readByte4,
 } from './src'
 
-const buf = readFileSync('./mcity.exe')
+const buf = readFileSync('')
 
 let programCounter = 0
 const STEP = 4
